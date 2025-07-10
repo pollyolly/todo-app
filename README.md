@@ -4,7 +4,7 @@ $ng serve
 ```
 ### Create Project
 ```
-$ng new counter-app
+$ng new todo-app
 ```
 ### Generate Component and Other
 ```
