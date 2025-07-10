@@ -1,0 +1,17 @@
+<h3>{{title}}</h3>
+<div>
+    <div>
+        <label for="todo_name">Todo Name</label>
+        <input type="text" name="todo_name" [(ngModel)]="todo_name"/>
+    </div>
+    <div>
+        <label for="todo_description">Todo Description</label>
+        <input name="todo_description" [(ngModel)]="todo_description" />
+    </div>
+    <div>
+        <label for="todo_status">Todo Status</label>
+        <input name="todo_status" type="checkbox" [(ngModel)] ="todo_status"/>
+    </div>
+    <button (click)="addTodo()">Add</button>
+</div>
+<button (click)="goBack()">Go Back</button>

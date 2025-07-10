@@ -1,0 +1,26 @@
+<h3>{{ title }}</h3>
+<div *ngFor="let todo of todos">
+    <div>
+        <label for="todo_id">Todo Id</label>
+        <input type="text" name="todo_id" [(ngModel)]="todo_id ? todo_id : todo.todo_id"/>
+    </div>
+    <div>
+        <label for="todo_name">Todo Name</label>
+        <input type="text" name="todo_name" [(ngModel)]="todo_name ? todo_name : todo.todo_name"/>
+    </div>
+    <div>
+        <label for="todo_description">Todo Description</label>
+        <input name="todo_description" [(ngModel)]="todo_description ? todo_description : todo.todo_description" />
+    </div>
+    <div>
+        <label for="todo_status">Todo Status</label>
+        <input 
+        name="todo_status"
+        type="checkbox"
+        [(ngModel)] ="todo_status ? todo_status: todo.todo_status"
+        />
+    </div>
+    <button (click)="updateTodo()">Update</button>
+    <button (click)="deleteTodo(todo.todo_id)">Delete</button>
+</div>
+<button (click)="goBack()">Go Back</button>

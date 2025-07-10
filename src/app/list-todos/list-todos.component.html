@@ -1,0 +1,11 @@
+<h3>{{title}}</h3>
+<div>
+    <ul *ngFor="let todo of todos">
+        <li>
+            <a routerLink="/update-todo/{{todo.todo_id}}">
+            {{todo.todo_name}}
+            </a>
+        </li>
+    </ul>
+</div>
+<button (click)="goBack()">Go Back</button>
